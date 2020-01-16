@@ -371,7 +371,7 @@ Available commands:
 
         buffer = BytesIO()
         c = pycurl.Curl()
-        url = '%s/cm?cmnd=Backlog%%20%s' % (host, b0.replace(' ', '%20'))
+        url = '%s/cm?cmnd=Backlog%%20%s%%3B%%20RfRaw%%200' % (host, b0.replace(' ', '%20'))
         c.setopt(c.URL, url)
         c.setopt(c.WRITEDATA, buffer)
         c.perform()
